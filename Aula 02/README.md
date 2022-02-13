@@ -33,3 +33,24 @@ agora no código:
   int n;
   int m[n][n];
 ```
+
+### acessando uma matriz
+
+```
+  m[row][column]
+```
+
+Na primeira posição indicamos a linha e na segunda a coluna. O uso do `for` é indispensável para manipulação de matrizes.
+
+imprindo todos os elementos de uma matriz de tamanho `n x n`:
+```c
+int i;
+
+for(int i=0; i<n; i++){
+  for(int j=0; j<n; j++){
+    printf("%d \n", m[i][j]);
+  }
+
+  printf("\n");
+}
+```
