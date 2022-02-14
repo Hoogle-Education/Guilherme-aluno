@@ -124,3 +124,65 @@ double area(int radius){
 os tipos mais conhecidos dentre as variáveis. Ex.: `int`, `double`, `float`, `char`, `long`.
 
 Além desses existe o tipo `void`. Este tipo indica que não há retorno, e que apenas executaremos uma sequência de passos lá dentro.
+
+
+# Funções Recursivas
+
+Uma função é dita recursiva quando chama a si mesma durante sua execução.
+
+Bons exemplos de funções recursivas:
+
+fatorial: n! = n * (n-1)!
+
+n! = n * n-1 * (n-2)!
+
+fibonacci: fib(n) = fib(n-1) + fib(n-2)
+
+```c
+int fatorial(int n){
+
+  if(n==1) return 1;
+
+  return n * fatorial(n-1);
+}
+```
+
+exemplos:
+```
+// ordenação
+ 3 5
+ 3 4 5
+ 2 3 4 5
+ 1  2 3 4 5
+
+// ordenação
+ 7 3 9 12 11 2 17
+ 3 7
+ 3 7 9
+ 3 7 9 12
+ 3 7 9 11 12
+ 2 3 7 9 11 12
+ 2 3 7 9 11 12 17
+
+// fibonacci linear
+ 1 1
+ 1 1 2
+ 1 1 2 3
+
+// fibonacci recursivo
+ fib(4)
+ fib(3) + fib(2)
+ fib(2) + fib(1) + fib(1) + fib(0)
+ fib(1) + fib(0) + 1 + 1 + 0
+ 1 + 0 + 1 + 1 + 0 = 3
+```
+
+**Toda recursão possui 2 elementos essenciais**
+
+## 1. caso base
+
+é o que faz a recursão parar as chamadas em algum momento.
+
+## 2. operação recursiva
+
+é quem faz as chamadas para casos menores da recursão.
